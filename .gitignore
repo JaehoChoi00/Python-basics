@@ -1,0 +1,27 @@
+# Never commit Environment and Security
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Operating System System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Package Manager & Build Directories
+node_modules/
+vendor/
+.cache/
+dist/
+build/
+out/
+
+# Server logs
+*.log
+
+# IDEs and Editors
+.vscode/*
+!.vscode/extensions.json
