@@ -11,14 +11,13 @@
 ## Sections
 
 > * [The Prologue](#the-prologue)
->     * [The Setup](#the-setup)
-> * [Reference](#references)
+> * [Using Pip](#using-pip)
  
 ---
 
-## [The Prologue](#sections)
+### [The Prologue](#sections)
 
-### The Setup
+#### The Setup
 
 > TLDR (Too Long; Didn't Read)  
 >
@@ -27,8 +26,28 @@
 > * **Linux / macOS**: The command is `python` (or `python3`).
 >     * **Mac / Linux** connect directly to the software, where `python3` explicitly runs the modern version (while `python` usually runs the outdated Python 2).
 > * **Windows**: The command is `py`.
->     * **Windows** uses `py` because it doesn't know where Python is installed.
->     * It uses a **launcher** that intercepts the `py` command and forwards it to the actual Python app
+>     * **Windows** uses the Python Launcher (`py`), which actively maps out every version of Python installed on the machine.
+>     * It acts as an intelligent router, intercepting the `py` command and forwarding it to the exact version requested (e.g., `py -3.12`), preventing global path conflicts.
 >
 > **FYI** (For Your Information)  
 > * My Computer is macOS
+
+### [Using Pip](#sections)
+
+**Upgrading Syntax: Bash**
+
+```bash
+python3 -m pip install --upgrade pip
+```
+
+**Installing Syntax: Bash**
+
+```bash
+python3 -m pip install packageName
+```
+
+**Uninstalling Syntax: Bash**
+
+```bash
+python3 -m pip uninstall packageName
+```
