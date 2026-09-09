@@ -347,16 +347,18 @@ class Expresso:
         Expresso.emit(output)
 
     @staticmethod
-    def hereAnnounce(customColor = None, customHeader = None, label = None):
+    def hereAnnounce(identity=None, customColor = None, customHeader = None, label = None):
         output = Expresso.appendDiagnosticTags()
         color = customColor if customColor is not None else Expresso.hereColor
         header = customHeader if customHeader is not None else Expresso.hereHeader
 
-        if label is not None and str(label).strip():
-            output += color + header + ": " + Expresso.RESET + str(label) + "\n"
-        else:
-            output += color + header + Expresso.RESET + "\n"
+        if identity is not None and str(identity).strip(): output += "[" + str(identity) + "] "
 
+        output += color + header + Expresso.RESET
+
+        if label is not None and str(label).strip(): output += ": " + str(label)
+        output += "\n"
+            
         Expresso.emit(output)
 
 
@@ -419,14 +421,8 @@ class Exposure:
         else:
             Expresso.error(formatString, *args)
 
-    def here(self, label=None):
-        if self.identity is not None and str(self.identity).strip():
-            if label is not None and str(label).strip():
-                Expresso.hereAnnounce(label="[" + str(self.identity) + "] " + str(label))
-            else:
-                Expresso.hereAnnounce(label="[" + str(self.identity) + "]")
-        else:
-            Expresso.hereAnnounce(label)
+    def here(self, label=None, customColor=None, customHeader=None):
+        Expresso.hereAnnounce(identity=self.identity, customColor=customColor, customHeader=customHeader, label=label)
 
     def getIdentity(self):
         return self.identity
