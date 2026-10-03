@@ -12,7 +12,7 @@ is Open.](https://www.python.org/about/#:~:text=Python%20is%20powerful...%20and%
 
 ## Sections
 
-### Core ELements
+### Core Elements
 
 > #### The basics
 > * ***[CS Circle](/csCircle/PythonCScircle.md)***
@@ -34,6 +34,7 @@ is Open.](https://www.python.org/about/#:~:text=Python%20is%20powerful...%20and%
 
 > * ***[GUI](GUI/GUI.md)***
 > * ***[NumPy](numpy/Numpy.md)***
+> * ***[FastAPI](fastAPI/FastAPI.md)***
 
 ---
 

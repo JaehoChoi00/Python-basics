@@ -12,6 +12,7 @@ desktop.ini
 $RECYCLE.BIN/
 
 # Package Manager & Build Directories
+__pycache__
 node_modules/
 vendor/
 .cache/
